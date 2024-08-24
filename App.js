@@ -17,5 +17,14 @@ const containerJSX = (
   </div>
 );
 
+const ContainerComponent = function () {
+  return (
+    <div key="d3">
+      <p>Second Paragraph - component</p>
+      <span>Second Span - component</span>
+    </div>
+  );
+};
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(containerJSX);
+root.render(<ContainerComponent></ContainerComponent>);
