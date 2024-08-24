@@ -1,13 +1,9 @@
-const span = document.createElement("span");
-span.innerText = "First Span";
+const span = React.createElement("span", { key: "s1" }, "First Span");
+const paragrpah = React.createElement("p", { key: "p1" }, "First Paragraph");
+const container = React.createElement("div", { className: "container" }, [
+  paragrpah,
+  span,
+]);
 
-const paragraph = document.createElement("p");
-paragraph.innerText = "First Paragraph";
-
-const container = document.createElement("div");
-container.setAttribute("class", "container");
-
-container.append(paragraph, span);
-
-const root = document.getElementById("root");
-root.appendChild(container);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(container);
